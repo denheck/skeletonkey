@@ -6,6 +6,7 @@ module Lockbox
   class Cli < Thor
     desc "add KEY", "add a new password for KEY"
     def add(key)
+      puts "Please Enter a Password for #{key}:"
       password = STDIN.gets.chomp
       Safe.add(key, Password.fromString(password))
     end
