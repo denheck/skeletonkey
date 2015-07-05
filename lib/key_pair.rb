@@ -1,9 +1,6 @@
 module Lockbox
   class KeyPair
     class << self
-      # TODO: move key path to ~/.ssh if available
-      # TODO: allow customizable keypath
-      # TODO: allow optional password for key
       KEY_PATH = '../data/'
 
       def generate
