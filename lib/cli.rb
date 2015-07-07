@@ -20,5 +20,10 @@ module Lockbox
     def get(key)
       puts Safe.get(key)
     end
+
+    desc "list", "list all KEYs"
+    def list
+      puts Safe.list
+    end
   end
 end

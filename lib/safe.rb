@@ -20,6 +20,11 @@ module Lockbox
         flush
       end
 
+      def list
+        reload
+        @storage.keys * "\n"
+      end
+
       private
 
       def reload
