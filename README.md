@@ -9,3 +9,6 @@ Add readme.md
 
 ### 0.2.0
 Add subcommand for listing all keys
+
+### 0.3.0
+Prevent passwords from displaying while using `./run.rb add KEY`
