@@ -1,7 +1,7 @@
 module Lockbox
   class KeyPair
     class << self
-      KEY_PATH = '../data/'
+      KEY_PATH = File.join(Dir.home, '.ssh')
 
       def generate
         return if File.exists?(private_key_path) && File.exists?(public_key_path)
@@ -32,11 +32,11 @@ module Lockbox
       private
 
       def private_key_path
-        KEY_PATH + "private_key.pem"
+        File.join(KEY_PATH, "private_key.pem")
       end
 
       def public_key_path
-        KEY_PATH + "public_key.pem"
+        File.join(KEY_PATH, "public_key.pem")
       end
     end
   end
