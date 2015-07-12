@@ -14,5 +14,8 @@ Add subcommand for listing all keys
 Prevent passwords from displaying while using `./run.rb add KEY`
 
 ### 0.4.0
-public and private keys as well as safe now stored in ~/.lockbox
-refactoring of object flow
+Public and private keys as well as safe now stored in ~/.lockbox
+Refactoring of object flow
+
+### 0.5.0
+Get command now accepts --copy flag for adding password to clipboard
