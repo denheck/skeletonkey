@@ -1,4 +1,5 @@
 require 'thor'
+require 'clipboard'
 require 'io/console'
 require '../lib/safe.rb'
 require '../lib/password.rb'
@@ -25,8 +26,15 @@ module Lockbox
     end
 
     desc "get KEY", "retrieve a password for KEY"
+    option :copy, :type => :boolean
     def get(key)
-      puts @safe.get(key)
+      password = @safe.get(key).to_str
+
+      if options[:copy]
+        Clipboard.copy(password)
+      else
+        puts password
+      end
     end
 
     desc "list", "list all KEYs"

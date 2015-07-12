@@ -17,7 +17,7 @@ module Lockbox
     end
 
     def get(key)
-      Password.fromHash(@storage[key]).to_str
+      Password.fromHash(@storage[key])
     end
 
     def remove(key)
