@@ -14,9 +14,18 @@ module Lockbox
 
     desc "add KEY", "add a new password for KEY"
     def add(key)
-      puts "Please Enter a Password for #{key}:"
       STDIN.noecho do |io|
-        @safe.add(key, Password.fromString(io.gets.chomp))
+        puts "Please Enter a Password for #{key}: "
+        first_attempt = io.gets.chomp
+
+        puts "Please confirm your password: "
+        second_attempt = io.gets.chomp
+
+        if first_attempt == second_attempt
+          @safe.add(key, Password.fromString(first_attempt))
+        else
+          puts "Your passwords do not match! Please try again"
+        end
       end
     end
 
