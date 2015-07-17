@@ -19,3 +19,6 @@ Refactoring of object flow
 
 ### 0.5.0
 Get command now accepts --copy flag for adding password to clipboard
+
+### 0.6.0
+Users now have to confirm their passwords before it will be put in the safe
