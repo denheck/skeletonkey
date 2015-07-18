@@ -3,6 +3,9 @@ Simple password storage
 
 ## Changelog
 
+### 0.6.1
+Users now get an error message instead of an exception when adding an empty password
+
 ### 0.6.0
 Users now have to confirm their passwords before it will be put in the safe
 
