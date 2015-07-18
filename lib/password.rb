@@ -6,6 +6,20 @@ module Lockbox
     attr_accessor :contents, :encrypted_contents, :iv, :key
 
     class << self
+      def valid?(password, confirmed_password, &on_invalid)
+        valid = true
+
+        if password != confirmed_password
+          on_invalid.call("Your passwords do not match! Please try again")
+          valid = false
+        elsif password === ''
+          on_invalid.call("Your password cannot be empty! Please try again")
+          valid = false
+        end
+
+        valid
+      end
+
       def fromHash(password_hash)
         password = new
         password.encrypted_contents = password_hash[:encrypted_contents]

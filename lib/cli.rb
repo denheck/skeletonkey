@@ -21,10 +21,10 @@ module Lockbox
         puts "Please confirm your password: "
         second_attempt = io.gets.chomp
 
-        if first_attempt == second_attempt
+        on_invalid = ->(message){ puts message }
+
+        if Password.valid?(first_attempt, second_attempt, &on_invalid)
           @safe.add(key, Password.fromString(first_attempt))
-        else
-          puts "Your passwords do not match! Please try again"
         end
       end
     end
