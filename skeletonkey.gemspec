@@ -8,4 +8,6 @@ Gem::Specification.new do |s|
   s.email       = 'denheck@gmail.com'
   s.homepage    = 'http://rubygems.org/gems/skeletonkey'
   s.license     = 'MIT'
+  s.files       = Dir["lib/skeletonkey/*.rb"] + Dir['bin/*']
+  s.executables << 'skeletonkey'
 end
