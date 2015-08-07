@@ -3,7 +3,7 @@ Simple password storage and retrieval
 
 ## Changelog
 
-### 0.7.0
+### 1.0.0
 Add bash completion script
 Make gem
 Rename to skeletonkey
