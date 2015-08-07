@@ -1,5 +1,5 @@
 require 'openssl'
-require_relative './key_pair.rb'
+require 'skeletonkey/key_pair'
 
 module Lockbox
   class Password

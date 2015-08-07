@@ -1,8 +1,8 @@
 require 'thor'
 require 'clipboard'
 require 'io/console'
-require '../lib/safe.rb'
-require '../lib/password.rb'
+require 'skeletonkey/safe'
+require 'skeletonkey/password'
 
 module Lockbox
   class Cli < Thor

@@ -1,7 +1,12 @@
-# lockbox
-Simple password storage
+# skeletonkey
+Simple password storage and retrieval
 
 ## Changelog
+
+### 0.7.0
+Add bash completion script
+Make gem
+Rename to skeletonkey
 
 ### 0.6.1
 Users now get an error message instead of an exception when adding an empty password
