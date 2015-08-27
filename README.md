@@ -1,6 +1,10 @@
 # skeletonkey
 Simple password storage and retrieval
 
+## What is Skeletonkey?
+
+Skeletonkey is a CLI tool for storing and retrieving your passwords with ease. The goals of the project are simplicity and security. It works using asymmetric encryption to securely lock your passwords in a safe that is only readable by Skeletonkey and its user.
+
 ## Changelog
 
 ### 1.0.0
