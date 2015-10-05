@@ -37,6 +37,17 @@ module Lockbox
         password.encrypt
         password
       end
+
+      def generate
+        fromString(
+          [
+            'a'..'z',
+            'A'..'Z',
+            0..9,
+            ['$', '#', '@', '&', '-', '!']
+          ].reduce{|a, l| a.to_a + l.to_a}.sample(18) * ''
+        )
+      end
     end
 
     def to_str

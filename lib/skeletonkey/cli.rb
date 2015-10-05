@@ -13,7 +13,13 @@ module Lockbox
     end
 
     desc "add KEY", "add a new password for KEY"
+    option :generate, :type => :boolean
     def add(key)
+      if options[:generate]
+        @safe.add(key, Password.generate)
+        return
+      end
+
       STDIN.noecho do |io|
         puts "Please Enter a Password for #{key}: "
         first_attempt = io.gets.chomp
