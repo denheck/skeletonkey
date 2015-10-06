@@ -10,7 +10,7 @@ Skeletonkey is a command line tool for storing and retrieving your passwords eas
 gem install skeletonkey
 ```
 
-### Adding Passwords
+### Usage
 
 Add a new password for an account or service, e.g., gmail, twitter, facebook, etc.
 ```
