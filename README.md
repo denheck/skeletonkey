@@ -3,6 +3,9 @@ Simple password storage and retrieval
 
 ## Changelog
 
+### 1.1.0
+When adding a new key the password can be generated instead of entered manually
+
 ### 1.0.0
 Add bash completion script
 Make gem
