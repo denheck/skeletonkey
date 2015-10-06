@@ -1,9 +1,46 @@
-# skeletonkey
-Simple password storage and retrieval
+## What is skeletonkey?
 
-## What is Skeletonkey?
+Skeletonkey is a command line tool for storing and retrieving your passwords easily. The goals of the project are simplicity and security. It works using asymmetric encryption to securely lock your passwords in a safe that is only accessible by skeletonkey.
 
-Skeletonkey is a CLI tool for storing and retrieving your passwords with ease. The goals of the project are simplicity and security. It works using asymmetric encryption to securely lock your passwords in a safe that is only readable by Skeletonkey and its user.
+## Getting Started
+
+### Installation
+
+```
+gem install skeletonkey
+```
+
+### Adding Passwords
+
+Add a new password for an account or service, e.g., gmail, twitter, facebook, etc.
+```
+skeletonkey add gmail
+```
+
+Skeletonkey will then prompt you for a password. Don't have a password yet. Skeletonkey will generate one for you if you pass the generate option.
+```
+skeletonkey add --generate gmail
+```
+
+Passwords aren't very useful unless they can be retrieved easily. Get your password in plaintext:
+```
+skeletonkey get gmail
+```
+
+Alternatively, have it copied to your clipboard with the copy option.
+```
+skeletonkey get --copy gmail
+```
+
+Get a list of all your accounts stored in skeletonkey:
+```
+skeletonkey list
+```
+
+Remove an account by its key:
+```
+skeletonkey remove gmail
+```
 
 ## Changelog
 
